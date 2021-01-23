@@ -1,13 +1,16 @@
 var express = require('express');
 var router = express.Router();
 var nodeMailer = require('nodemailer');
+var bodyParser = require('body-parser')
+
+var jsonParser = bodyParser.json()
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index.pug');
 });
 
-router.post('/index/send', function(req, res) {
+router.post('/index/send',jsonParser, function(req, res) {
   var transporter = nodeMailer.createTransport({
     service : 'Gmail',
     auth : 
@@ -17,14 +20,14 @@ router.post('/index/send', function(req, res) {
     }
   });
 
-  var mailOptions = {
-    from: req.body.email,
-    to: 'sashi.estrella@gmail.com',
-    text:'De:'+ req.body.name+' Email:'+req.body.email+' Mensaje:'+req.body.message,
-    html:'<p><ul><li>Nombre: '+ req.body.name+'</li><li> Email: '+req.body.email+'</li><li>Mensaje: '+req.body.message+'</li></ul>',
-  }
-
-  transporter.sendMail(mailOptions, function (err, info){
+  var mail ={ 
+    from:req.body.email,  //remitente
+    to:"sashi.estrella@gmail.com",  //destinatario
+    subject:"Nuevo mensaje de Veganos y Sanos",  //asunto del correo
+    html: '<p><ul><li>Nombre: '+ req.body.name+'</li><li> Email: '+req.body.email+'</li><li>Mensaje: '+req.body.message+'</li></ul>',
+  };
+  
+  transporter.sendMail(mail, function (err, info){
     if(err){
       console.log(err);
       //res.redirect('/error');
@@ -34,6 +37,5 @@ router.post('/index/send', function(req, res) {
     }
   });
 });
-
 
 module.exports = router;
