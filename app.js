@@ -31,6 +31,9 @@ app.use('/recetas', recetasRouter);
 app.use('/veganismo', veganismoRouter);
 app.use('/comoComenzar', comoComenzarRouter);
 
+const cors = require('cors')
+app.use(cors())
+
 /*
 app.use((req, res, next) => {
   var currentURL = req.originalUrl;

@@ -28,11 +28,14 @@ router.post('/index/send', function(req, res) {
     if(err){
       console.log(err);
       //res.redirect('/error');
+      return res.end();
     }else{
       console.log('Mensaje enviado');
       res.send('Su mensaje fue enviado exitosamente, gracias por visitar nuestra página.');
+      return res.end();
     }
   });
+  
 });
 
 module.exports = router;
