@@ -1,0 +1,111 @@
+extends layout
+
+block content
+    nav.navbar.navbar-expand-lg.fixed-top.py-3
+        .container
+            a.navbar-brand.text-uppercase.font-weight-bold(href='/') Veganos y Sanos
+
+    header
+        #carouselExampleIndicators.carousel.slide(data-ride='carousel')
+            ol.carousel-indicators
+                li.active(data-target='#carouselExampleIndicators' data-slide-to='0')
+                li(data-target='#carouselExampleIndicators' data-slide-to='1')
+                li(data-target='#carouselExampleIndicators' data-slide-to='2')
+                li(data-target='#carouselExampleIndicators' data-slide-to='3')
+            .carousel-inner(role='listbox')
+                .carousel-item.active(style="background-image: url(../images/welcome.jpg)")
+                    
+                .carousel-item(style="background-image: url(../images/cerditos.jpg)")
+                    
+                .carousel-item(style="background-image: url(../images/gallinalinda.jpg)")
+                    
+                .carousel-item(style="background-image: url(../images/vacasLindas.jpg)")
+                    
+            a.carousel-control-prev(href='#carouselExampleIndicators' role='button' data-slide='prev')
+                span.carousel-control-prev-icon(aria-hidden='true')
+                span.sr-only Anterior
+            a.carousel-control-next(href='#carouselExampleIndicators' role='button' data-slide='next')
+                span.carousel-control-next-icon(aria-hidden='true')
+                span.sr-only Siguiente
+
+        pre
+        // Page Content
+        .container
+            .row
+                .col-lg-4.mb-4
+                    .card.h-100
+                        h4.card-header ¿Qué es el veganismo? 
+                            img(id="vegan" src="images/vegan.png")
+                        .card-body
+                            p.card-text
+                                |Aquí podrás encontrar información sobre qué es el veganismo y como comenzar hacia una vida más saludable.
+                            p.card-text(id="segundo")
+                                |El veganismo está siendo cada vez más común, puesto que más personas descubren que pueden ayudar a evitar el sufrimiento y la muerte de animales sencillamente al reemplazar los alimentos y otros productos de origen animal por otras alternativas...
+                        .card-footer
+                            a.btn.btn-success(href='/veganismo') Más información»
+                .col-lg-4.mb-4
+                    .card.h-100
+                        h4.card-header Recetas
+                            img(id="recetas" src="images/receta.png")
+                        .card-body
+                            p.card-text 
+                                |Creamos adaptaciones de recetas veganas con gluten a <b>sin gluten</b> (sin tacc), fáciles y exquisitas!
+                            p.card-text(id="segundo") 
+                                |¿No sabes qué pedir cuando sales a comer con tus amistades o con tu familia? En casi cualquier restaurante puedes encontrar arroz, ensaladas, patatas, pasta o setas, platos que se pueden pedir con pequeños cambios si no son veganos. Además, los restaurantes chinos, indios, árabes e italianos, entre muchos otros, ofrecen platos deliciosos sin ingredientes de origen animal.
+                        .card-footer
+                            a.btn.btn-success(href='/recetas') Ver recetas»
+                .col-lg-4.mb-4
+                    .card.h-100
+                        h4.card-header Nuestro instagram 
+                            img(id="instagram" src="images/instagram.png")
+                    
+                        .card-body
+                            p.card-text No te olvides de visitar nuestro instagram! subimos contenido actualizado y recetas nuevas más rápido.
+                            iframe(src="https://snapwidget.com/embed/903918", class="snapwidget-widget", allowtransparency="true", frameborder="0", scrolling="no", style="border:none; overflow:hidden;  width:300px; height:80px")
+                            p.card-text(id="segundo") 
+                                |Podemos vivir de una manera ética al elegir el veganismo. <b>Únete a los millones de personas que apoyan y defienden a los animales</b>.
+                        .card-footer
+                            a.btn.btn-success(href='https://www.instagram.com/veganos_y_sanos/') Ir al perfil»
+
+        section(style="background-image: url(../images/vegano3.jpg)")
+            .container
+                .p-5
+                    video(width="700",height="440",controls="controls",autoplay poster="images/muybueno.jpg")
+                        source(src='video/videoAnimales.mp4',type='video/mp4')
+                
+        section(style="background: linear-gradient(#ffe259, #ffa751)")
+            .container
+                .row.align-items-center
+                    .col-lg-6.order-lg-2
+                        form(method="post", action="index/send",id="contactForm") 
+                            h3
+                                p Contacto 
+                                    img(id="lapiz" src="images/lapiz.png")
+                            .form-group
+                                label(for='inputName') <mark>Nombre</mark>
+                                input.form-control(type="text",name="name", placeholder="ingresa tu nombre...",required)
+                            .form-group
+                                label(for='inputEmail4') <mark>Email</mark>
+                                input#inputEmail4.form-control(type='email' name="email" placeholder='escribe tu email...' required)
+                            .form-group
+                                select#inputState.form-control
+                                    option(selected='') elije...
+                                    option Ninguna
+                                    option Soy vegetariano/a o vegano/a
+                                    option Me encuentro en transición al veganismo o vegetarianismo
+                            -form-group
+                                label(for="inputMessage") <mark>Mensaje</mark>
+                                textarea.form-control(name="message", placeholder="describe tu mensaje...",maxlength="600",required)
+                                pre
+                                input.btn.btn-warning(type="submit",name="enviar", value="Enviar")
+                            
+                    .col-lg-6.order-lg-1
+                        .p-5
+                        img.img-fluid.rounded-circle(src='images/zorros.jpg' alt='')
+                        .p-5
+    // Footer
+    footer.py-5.bg-dark
+        .container
+            p.m-0.text-center.text-muted.small.mb-0 Copyright © Veganos y Sanos 2021
+                
+        

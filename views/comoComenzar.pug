@@ -1,0 +1,65 @@
+extends layout
+
+block content
+    nav.navbar.navbar-expand-lg.fixed-top.py-3
+        .container
+            a.navbar-brand.text-uppercase.font-weight-bold(href='/') Veganos y Sanos
+
+    ul.nav.nav-pills(style="background: linear-gradient(#9796f0, #fbc7d4)")
+        li.nav-item
+            a.nav-link(href='/veganismo') Sobre el veganismo
+        li.nav-item
+            a.nav-link(href='/comoComenzar') Como comenzar
+        
+        section.page-section.clearfix
+            .container
+                .intro
+                    img.intro-img.img-fluid.mb-3.mb-lg-0.rounded(src='images/vaquita.jpg' alt='')
+                    .intro-text.left-0.text-center.bg-faded.p-5.rounded
+                        h2.section-heading.mb-4
+                            span.section-heading-upper 
+                                p.mb-3 Las mentes más profundas de todos los tiempos han sentido compasión por los animales.
+                            span.section-heading-lower -Friedrich Nietszche
+
+    section(id="tipos")
+        .container
+            .row.align-items-center
+                .p-5
+                    h2.section-heading.mb-4
+                        span.section-heading-upper <mark>Tipos de vegetarianismo</mark>
+                        pre
+                        span.section-heading-lower <mark> - Decide el tuyo</mark>
+                    |Hay varios tipos de perfiles dependiendo de los alimentos que se incluyan en la dieta vegetariana, pero el denominador común sigue siendo el mismo: la no ingesta de cualquier tipo de carne animal. Esta clasificación se basa en el grado de rigurosidad con el que los vegetarianos deciden comer más o menos productos con ingredientes de origen animal en su composición:
+                    ul
+                        li <b>Ovovegetarianismo</b>: es un tipo de dieta vegetariana en el que se consumen huevos (de cualquier ave), pero no lácteos ni miel.
+                        li <b>Lacteovegetarianismo</b>: en cambio, en este tipo sí que se consumen lácteos como leche, yogur o queso, pero no huevos ni miel.
+                        li <b>Ovolacteovegetarianismo</b>: agrupa a los 2 anteriores, pudiendo comer tanto huevos como lácteos pero no miel.
+                        li <b>Apivegetarianismo</b>: sí que se consume miel pero no lácteos ni huevos.
+                        li <b>Apiovolacteovegetarismo</b>: si se consumen los 3 alimentos a la vez (miel, huevos y lácteos) la dieta vegetariana será de este tipo.
+                        li <b>Veganismo</b>
+                        li <b>Crudivorismo</b>: aquí solo se consumen alimentos no cocinados, es decir crudos, ya sean verduras, frutas, semillas, frutos secos o cereales. Como máximo se puede cocinar un alimento hasta los 40 °C para que no pierdan sus propiedades naturales. 
+                        li <b>Frugivorismo</b>: solo se consumen frutas en todas sus variedades, sobre todo de temporada.
+                        li <b>Flexitarianismo o flexivegetarianismo</b>: hace referencia a una reciente tendencia surgida hace algunos años basada en una dieta vegetariana combinada de manera ocasional y/o oportunista con la ingesta de algún producto animal, pero siempre manteniendo un porcentaje mucho mayor de alimentos vegetarianos.
+    
+    section(id="pocoapoco",style="background: linear-gradient(#c6ffdd, #fbd786, #f7797d)")
+        .container
+            .row.align-items-center
+                .p-5
+                    h2.section-heading.mb-4
+                        span.section-heading-upper Hacerme vegetariano
+                        pre
+                        span.section-heading-lower poco a poco
+                    ol
+                        li(value="1") Empieza por sustituir las carnes animales de los platos que cocinas normalmente por proteína vegetal. La legumbres, los cereales, los frutos secos, las semillas, los derivados de la soja como el tofu o el tempéh, o el seitán (derivado del trigo) entre otros alimentos, son muy ricos en proteínas y se pueden encontrar fácilmente en cualquier sitio. Normalmente, primero es más fácil dejar las carnes rojas (cerdo, ternera, vaca, buey...), luego las blancas (pollo, conejo y otra aves) y por último el pescado y el marisco. Esta transición puede ser gradual y no hay ninguna duración predeterminada. Nuestra recomendación es que cada semana dejes un tipo de carne y la sustituyas por una buena ración de proteína vegetal. 
+                        li(value="2") A medida que vayas sustituyendo las carnes de tus platos más cotidianos busca nuevos ingredientes que normalmente no comes y anímate a preparar recetas diferentes. 
+                        li(value="3") Si decides ser lacteovegetariano no hay problema pero, si no, cambia la leche animal por leche vegetal. Existe una gran variedad de diferentes tipos en el mercado según su procedencia como por ejemplo, la leche de coco (y otras frutas), la leche de almendras (y otro frutos secos), o la leche de arroz (u otros cereales). Tanto la leche animal como la vegetal no son productos esenciales para el correcto funcionamiento del cuerpo humano, así que también esta la opción de reducir o evitar su consumo totalmente.
+                        li(value="4") Si decides ser vegetariano y no comer huevos, existen muchos sustitutos vegetales que pueden ayudarte a hacer tus recetas con huevo manteniendo un sabor y una textura muy parecidas, como por ejemplo una tortilla de patatas con harina de garbanzos. Las semillas de chía hidratadas, los frutos secos o la mezcla de "huevo vegetal" que venden ya preparada, entre muchos otros, son ingredientes que podrán sustituirlos fácilmente en todos tus platos.
+                        li(value="5") Y lo mismo pasa con la miel. En el mercado existen múltiples sustitutos de este azúcar tanto naturales como artificiales, pero siempre son más recomendables los de origen natural, obviamente, como la estevia, el sirope de arce, el sirope de agave o los dátiles, que son un excelente endulzante natural, perfectos para incluir en batidos y en otras recetas dulces.
+                        li(value="6") Saber los nutrientes que tu cuerpo necesita para funcionar correctamente es lo más importante al fin y al cabo. Muchas veces pasa que al cambiar el estilo de alimentación se comete el error de sustituir simplemente unos alimentos por otros, sin embargo esto no es lo único que hay que hacer, también es importante saber cuáles son los grupos de alimentos esenciales para nuestro organismo (hidratos de carbono, proteínas y grasas) y a partir de ahí, establecer una pauta, guía o dieta detallada a seguir. Si no sabes cómo hacerlo de forma correcta, te recomendamos acudir a un especialista/dietista/nutrionista/endocrino.
+                        li(value="7") Una vez tienes claros todos los nutrientes que no pueden faltar en tu dieta vegetariana y ya sabes cómo sustituir las carnes animales sin que te falte ninguno, también tienes que saber que existe solamente una vitamina esencial para el organismo que no ingerirás a diferencia de si sigues una dieta omnívora y que ha tenido mucha controversia estos últimos años, y es la <b>vitamina B12</b>. Los humanos, al igual que los animales, no somos capaces de producir este compuesto generado por unos microorganismos que viven en el suelo en estado de simbiosis con las raíces de las plantas, y por ello debemos consumirla de manera externa gracias a productos fortificados o suplementos alimenticios. Hace tiempo se creía que los ovolacteovegetarianos no era necesario que consumieran esta vitamina porque los huevos y lo lácteos ya contienen ciertas cantidades de B12 debido a la sumplementación de los piensos que les dan a los animales para alimentarlos, pero estudios recientes demuestran que tanto estos como todos los otros perfiles de vegetarianos y, sobre todo, los veganos, deben sumplementarse sí o sí con esta vitamina para que no haya ningún déficit en su organismo.
+    
+    // Footer
+    footer.py-5.bg-dark
+        .container
+            p.m-0.text-center.text-muted.small.mb-0 Copyright © Veganos y Sanos 2021
+                

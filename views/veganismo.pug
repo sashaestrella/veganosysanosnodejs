@@ -1,0 +1,82 @@
+extends layout
+
+block content
+    nav.navbar.navbar-expand-lg.fixed-top.py-3
+        .container
+            a.navbar-brand.text-uppercase.font-weight-bold(href='/') Veganos y Sanos
+
+    ul.nav.nav-pills(style="background: linear-gradient(#9796f0, #fbc7d4)")
+        li.nav-item
+            a.nav-link(href='/veganismo') Sobre el veganismo
+        li.nav-item
+            a.nav-link(href='/comoComenzar') Como comenzar
+    
+        section.page-section.clearfix
+            .container
+                .intro
+                    img.intro-img.img-fluid.mb-3.mb-lg-0.rounded(src='images/cerdito.jpg' alt='')
+                    .intro-text.left-0.text-center.bg-faded.p-5.rounded
+                        h2.section-heading.mb-4
+                            span.section-heading-upper 
+                                p.mb-3 Nuestra tarea es la de liberarnos... mediante la extensión de nuestro círculo de compasión hasta que contenga a todas las criaturas vivientes, la naturaleza entera y su belleza.
+                            span.section-heading-lower -Albert Einstein
+        
+    section(id="queesveganismo")
+        .container
+            .row.align-items-center
+                .col-lg-6.order-lg-2
+                    .p-5
+                        h2.section-heading.mb-4
+                            span.section-heading-upper <mark>¿Qué es el</mark>
+                            pre
+                            span.section-heading-lower <mark>veganismo?</mark>
+                        |El <b>veganismo</b> va mucho más allá de la mera alimentación, es una filosofía que se mueve por el respeto a los animales y la oposición a la explotación de los mismos.
+                        br
+                        |Si nos paramos a pensarlo, el ser humano tiende a utilizar al mundo animal para su propio beneficio en multitud de facetas de la vida. Nos alimentamos en buena parte de carne o productos procedentes de ciertos animales, investigamos con ellos para testar tratamientos o cremas, y nos vestimos con sus pieles. Y esto es precisamente lo que el veganismo evita.
+                        br
+                        |La sociedad en la que vivimos nos educa para que consideremos que las personas humanas merecen un respeto sagrado, mientras que los animales no humanos existen para nuestro beneficio. Crecemos pensando que los seres humanos somos seres superiores mientras que los animales son simples cosas animadas cuya vida realmente no es importante y por tanto podemos utilizar a nuestro antojo.
+                        br
+                        |Por eso es que muchas personas se preocupan por los perros o los gatos, por ser animales domésticos dóciles y cariñosos con el ser humano. Sin embargo, también hay que pensar en todos los demás animales, como las vacas, los cerdos, las gallinas o las ratas, a pesar de ser más ajenos a nuestra vida diaria.
+                .col-lg-6.order-lg-1
+                    img.img-fluid(src='images/tigres.jpg' alt='')
+
+    section(id="ventajas",style="background: linear-gradient(#9796f0, #fbc7d4)")
+        .container
+            .row.align-items-center
+                .col-lg-6.order-lg-2
+                    img.img-fluid(src='images/monito.jpg' alt='')
+                .col-lg-6.order-lg-1
+                    .p-5
+                        h2.section-heading.mb-4
+                            span.section-heading-upper Dieta vegana
+                            span.section-heading-lower ventajas
+                        |Las últimas investigaciones científicas han demostrado que siempre que las dietas estén bien estructuradas y planificadas, la alimentación vegana suele contener cantidades adecuadas de <b>ácido fólico, magnesio, fibra, hierro y vitaminas como la C y la E</b>. Además, esta alimentación se caracteriza por tener un índice de <b>calorías menor y de otros nutrientes como el colesterol, los ácidos omega 3 y las grasas saturadas</b>, así como de elementos importantes como la <b>vitamina D, el calcio o la vitamina B12</b>.
+                        br
+                        |Por otro lado, los especialistas consideran que este tipo de dieta <b>puede contribuir a proteger frente a ciertas enfermedades degenerativas</b>, incluso algunos tipos de enfermedades crónicas, como la osteoporosis, el cáncer, la diabetes, la hipertensión, las enfermedades cardiovasculares o la insuficiencia renal, entre otras. De hecho, se considera que podrían ayudar en la prevención de otras patologías y eventos relacionados como la aparición de los cálculos biliares, la artritis reumatoide o la diverticulosis. También se asocia esta opción alimentaria con beneficios para el sistema inmunológico.
+                        br
+                        |Otro aspecto importante fue que en 2009, una investigación publicada en The American Journal of Clinical Nutrition, avalaba esta creencia y revelaba que los veganos suelen ser más delgados que las personas que siguen una dieta en la que se consumen productos animales. La investigación destacaba que los seguidores del veganismo <b>tienen menos riesgo de sufrir eventos cardiacos</b> ya que presentan unos índices más bajos de colesterol.
+    section(id="diferenciasveg")
+        .container
+            .row.align-items-center
+                .col-lg-6.order-lg-2
+                    .p-5
+                        h2.section-heading.mb-4
+                            span.section-heading-upper <mark>Diferencias entre</mark>
+                            pre
+                            span.section-heading-lower <mark>veganos y </mark>
+                            pre
+                            span.section-heading-lower <mark>vegetarianos </mark>
+                        |Se trata de dos tipos de alimentación diferentes, aunque tengan algunos puntos en común.
+                        br
+                        |La dieta <b>vegetariana</b> es aquella en la que se eliminan los productos animales (carnes, pescados y mariscos), pero no necesariamente los de origen animal, como la miel, los huevos o la leche.
+                        br
+                        |Por su parte, la diferencia radica en que el <b>veganismo</b> va más allá de la propia dieta vegana. Es una forma de vida en la que se incluyen ciertas pautas alimenticias, pero también otras ideas que rechazan la explotación animal en cualquier ámbito. Por lo tanto, en este caso sí se oponen a los productos de origen animal como la leche, los huevos o la miel.
+                        pre
+                .col-lg-6.order-lg-1
+                    img.img-fluid(src='images/perro.jpg' alt='')
+    pre
+    // Footer
+    footer.py-5.bg-dark
+        .container
+            p.m-0.text-center.text-muted.small.mb-0 Copyright © Veganos y Sanos 2021
+                

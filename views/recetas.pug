@@ -1,0 +1,72 @@
+extends layout
+
+block content
+    nav.navbar.navbar-expand-lg.fixed-top.py-3
+        .container
+            a.navbar-brand.text-uppercase.font-weight-bold(href='/') Veganos y Sanos
+
+    pre
+    .container      
+        .row
+            .col-lg-4.col-sm-6.portfolio-item
+                .card.h-100
+                    a(href='https://www.instagram.com/p/CH586_2Huu0/')
+                        img.card-img-top(src='images/bizcoDeNaranja.png' class="w3-border w3-padding" alt='')
+                    .card-body
+                        h4.card-title 
+                            |Torta de Naranja
+                            //a(href='/recetas/verReceta/' + recetas[0].titulo) <b>Torta de naranja</b>
+                        a.btn.btn-success(href="/descarga/Torta de naranja") Descargar receta
+            .col-lg-4.col-sm-6.portfolio-item
+                .card.h-100
+                    a(href='https://www.instagram.com/p/CIwgrdwnrxS/')
+                        img.card-img-top(src='images/brownies.jpeg' class="w3-border w3-padding" alt='')
+                    .card-body
+                        h4.card-title
+                            |Brownies de Chocolino
+                            //a(href='/recetas/verReceta/' + recetas[1].titulo) <b>Brownies de Chocolino</b>   
+                        a.btn.btn-success(href="/descarga/Brownies") Descargar receta
+            .col-lg-4.col-sm-6.portfolio-item
+                .card.h-100
+                    a(href='https://www.instagram.com/p/CFGfIqQA-ar/')
+                        img.card-img-top(src='images/quesoDeGarbanzos.jpg' class="w3-border w3-padding" alt='')
+                    .card-body
+                        h4.card-title
+                            |Queso de Garbanzos
+                            //a(href='/recetas/verReceta/' + recetas[2].titulo) <b>Queso de garbanzos</b> 
+                        a.btn.btn-success(href="/descarga/Queso de garbanzos") Descargar receta
+            .col-lg-4.col-sm-6.portfolio-item
+                .card.h-100
+                    a(href='https://www.instagram.com/p/CF7xGG6HLCD/')
+                        img.card-img-top(src='images/tortaDeManzanaPosta.jpeg' class="w3-border w3-padding" alt='')
+                    .card-body
+                        h4.card-title
+                            |Torta de Manzana
+                            //a(href='/recetas/verReceta/' + recetas[3].titulo) <b>Torta de manzana</b>
+                        a.btn.btn-success(href="/descarga/Torta de manzana") Descargar receta
+            .col-lg-4.col-sm-6.portfolio-item
+                .card.h-100
+                    a(href='https://www.instagram.com/p/CGd_s3AnuuU/')
+                        img.card-img-top(src='images/pizza.jpg' class="w3-border w3-padding" alt='')
+                    .card-body
+                        h4.card-title
+                            |Pizza
+                            //a(href='/recetas/verReceta/' + recetas[4].titulo) <b>Pizza</b>
+                        a.btn.btn-success(href="/descarga/Pizza") Descargar receta
+            .col-lg-4.col-sm-6.portfolio-item
+                .card.h-100
+                    a(href='https://www.instagram.com/p/CFimcViBT0L/')
+                        img.card-img-top(src='images/bombasDePapa.jpg' class="w3-border w3-padding" alt='')
+                    .card-body
+                        h4.card-title
+                            |Bombas de Papa
+                            //a(href='/recetas/verReceta/' + recetas[5].titulo) <b>Bombas de papa</b>
+                        a.btn.btn-success(href="/descarga/Bombas de papa") Descargar receta
+
+        a.btn.btn-primary(href="/") »Volver
+    pre                      
+    // Footer
+    footer.py-5.bg-dark
+        .container
+            p.m-0.text-center.text-muted.small.mb-0 Copyright © Veganos y Sanos 2021
+    
