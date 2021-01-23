@@ -32,7 +32,7 @@ router.post('/index/send', function(req, res) {
     }else{
       console.log('Mensaje enviado');
       res.send('Su mensaje fue enviado exitosamente, gracias por visitar nuestra página.');
-      return res.end();
+      return res.json({message: "Su mensaje ha sido enviado. Gracias por visitar nuestra página."});
     }
   });
   
