@@ -1,16 +1,13 @@
 var express = require('express');
 var router = express.Router();
 var nodeMailer = require('nodemailer');
-var bodyParser = require('body-parser')
-
-var jsonParser = bodyParser.json()
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index.pug');
 });
 
-router.post('/index/send',jsonParser, function(req, res) {
+router.post('/index/send', function(req, res) {
   var transporter = nodeMailer.createTransport({
     service : 'Gmail',
     auth : 

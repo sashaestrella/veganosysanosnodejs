@@ -5,6 +5,7 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var fs = require("fs");
+var body_parser = require('body-parser');
 
 var indexRouter = require('./routes/index');
 var recetasRouter  = require('./routes/recetas');
@@ -18,6 +19,7 @@ app.set('view engine', 'pug');
 
 app.use(logger('dev'));
 app.use(express.json());
+app.use(body_parser.urlencoded({ extended:true }));
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
