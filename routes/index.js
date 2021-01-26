@@ -40,7 +40,6 @@ router.post('/index/send', function(req, res) {
       return res.end();
     }
   });
-  
 });
 
 module.exports = router;

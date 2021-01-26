@@ -4,6 +4,7 @@
 var app = require('../app');
 var debug = require('debug')('veganosysanosnodejs:server');
 var http = require('http');
+var socketIo = require('socket.io');
 
 /**
  * Get port from environment and store in Express.
@@ -22,6 +23,13 @@ var server = http.createServer(app);
 server.listen(port);
 server.on('error', onError);
 server.on('listening', onListening);
+
+var io = socketIo(server);
+
+io.on('connection', (socket) => {
+  console.log("nueva conexion");
+})
+
 
 /**
  * Normalize a port into a number, string, or false.

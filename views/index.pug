@@ -103,9 +103,18 @@ block content
                         .p-5
                         img.img-fluid.rounded-circle(src='images/zorros.jpg' alt='')
                         .p-5
-    // Footer
-    footer.py-5.bg-dark
-        .container
-            p.m-0.text-center.text-muted.small.mb-0 Copyright © Veganos y Sanos 2021
-                
+
         
+    // WhatsApp div
+    #WAButton
+    script(type='text/javascript').
+        $(function () {
+            $('#WAButton').floatingWhatsApp({
+                phone: '+5491165497183', 
+                headerTitle: 'Ahora también puedes enviarnos un WhatsApp!', 
+                showPopup: true,
+                buttonImage: '<img src="https://rawcdn.githack.com/rafaelbotazini/floating-whatsapp/3d18b26d5c7d430a1ab0b664f8ca6b69014aed68/whatsapp.svg" />',
+                position: "right" 
+            });
+        });
+    
