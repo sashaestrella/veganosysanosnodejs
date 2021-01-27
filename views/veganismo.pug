@@ -7,22 +7,16 @@ block content
                 img.d-inline-block.align-top(src='images/veganosYsanos.jpeg' width='30' height='30' alt='')
             |   Veganos y Sanos
     br       
-    ul.nav.nav-pills(style="background: linear-gradient(#9796f0, #fbc7d4)")
+    ul.nav.nav-pills
+        li.nav-item.dropdown
+          a.nav-link.dropdown-toggle(data-toggle='dropdown' href='/veganismo' role='button' aria-haspopup='true' aria-expanded='false') Sobre el veganismo
+          .dropdown-menu
+              a.dropdown-item(href='#queesveganismo') ¿Qué es el veganismo?
+              a.dropdown-item(href='#ventajas') Dieta vegana ventajas
+              a.dropdown-item(href='#diferenciasveg') Diferencias entre veganos y vegetarianos
         li.nav-item
-            a.nav-link(href='/veganismo') Sobre el veganismo
-        li.nav-item
-            a.nav-link(href='/comoComenzar') Como comenzar
+          a.nav-link(href='/comoComenzar') Como comenzar
     
-        section.page-section.clearfix
-            .container
-                .intro
-                    img.intro-img.img-fluid.mb-3.mb-lg-0.rounded(src='images/cerdito.jpg' alt='')
-                    .intro-text.left-0.text-center.bg-faded.p-5.rounded
-                        h2.section-heading.mb-4
-                            span.section-heading-upper 
-                                p.mb-3 Nuestra tarea es la de liberarnos... mediante la extensión de nuestro círculo de compasión hasta que contenga a todas las criaturas vivientes, la naturaleza entera y su belleza.
-                            span.section-heading-lower -Albert Einstein
-        
     section(id="queesveganismo")
         .container
             .row.align-items-center

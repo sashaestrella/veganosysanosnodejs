@@ -15,6 +15,10 @@ body {
   color: rgb(22, 148, 54);
 }
 
+.nav-link {
+  color:black;
+}
+
 body {
   min-height: 110vh;
   background-color: #399b59;
@@ -91,9 +95,6 @@ form input{
 h4 {
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   color: black;
-}
-span{
-  color: #4db904; 
 }
 
 .aviso{
@@ -177,8 +178,16 @@ span{
 	transform: scale(1.1);
 }
 
-.bg-faded {
-  background-color: rgba(255, 255, 255, 0.85);
+#seccion {
+  background-image: url(../images/09-abrazo.jpg);
+  background-size: 1000px;
+  width: 1000px; 
+  height: 500px;
+  margin:auto;
+}
+
+.section-heading-upper,.section-heading-lower {
+  color:#e1f5c4;
 }
 
 .intro-img.img-fluid.mb-3.mb-lg-0.rounded {
@@ -237,9 +246,7 @@ span{
   z-index: -1;
 }
 
-.nav-link {
-  color: azure;
-}
+
 
 .img-fluid {
   border: 2px solid plum;

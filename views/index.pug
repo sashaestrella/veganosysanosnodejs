@@ -3,14 +3,19 @@ extends layout
 block content
     // Image and text
     nav.navbar.navbar-expand-lg.fixed-top.py-3.bg-light
-        a.navbar-brand(href='/')
+        a#navbarDropdownPortfolio.nav-link.dropdown-toggle(href='/' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
             span.border.border-success
                 img.d-inline-block.align-top(src='images/veganosYsanos.jpeg' width='30' height='30' alt='')
             |   Veganos y Sanos
+        .dropdown-menu(aria-labelledby='navbarDropdownPortfolio')
+            a.dropdown-item(href='/') Inicio
+            a.dropdown-item(href='#carousel') Veganismo, recetas y más
+            a.dropdown-item(href='#video') Mira nuestro video
+            a.dropdown-item(href='#contacto') Envíanos un mensaje! 
 
     header
         #carouselExampleIndicators.carousel.slide(data-ride='carousel')
-            ol.carousel-indicators
+            ol.carousel-indicators(id="carousel")
                 li.active(data-target='#carouselExampleIndicators' data-slide-to='0')
                 li(data-target='#carouselExampleIndicators' data-slide-to='1')
                 li(data-target='#carouselExampleIndicators' data-slide-to='2')
@@ -70,52 +75,54 @@ block content
                         .card-footer
                             a.btn.btn-success(href='https://www.instagram.com/veganos_y_sanos/') Ir al perfil»
 
-        section(style="background-image: url(../images/vegano3.jpg)")
+        section(style="background-image: url(../images/vegano3.jpg)",id="video")
             .container
-                .p-5
+                .intro-text.left-0.text-center.bg-faded.p-5.rounded
                     video(width="700",height="440",controls="controls",autoplay poster="images/muybueno.jpg")
                         source(src='video/videoAnimales.mp4',type='video/mp4')
-                
-        section
+        section.page-section.clearfix
             .container
-                .row.align-items-center
-                    .col-lg-6.order-lg-2
-                        form(method="post", action="index/send",id="contactForm") 
-                            h4   
-                                img(id="lapiz" src="images/mensaje.png")
-                                |   Envíanos un mensaje! 
-                            .form-group
-                                label(for='inputName') Nombre 
-                                    span.obligatorio *
-                                input.form-control(type="text",name="name", placeholder="ingresa tu nombre...",required="obligatorio")
-                            .form-group
-                                label(for='inputEmail4') Email 
-                                    span.obligatorio *
-                                input#inputEmail4.form-control(type='email' name="email" placeholder='escribe tu email...' required="obligatorio")
-                            .form-group
-                                select#inputState.form-control
-                                    option(selected='') elije...
-                                    option Ninguna
-                                    option Soy vegetariano/a o vegano/a
-                                    option Me encuentro en transición al veganismo o vegetarianismo
-                            -form-group
-                                label(for="inputMessage") Mensaje
-                                    span.obligatorio *
-                                textarea.form-control(name="message", placeholder="describe tu mensaje...",maxlength="600",required="obligatorio")
-                                pre
-                                input(id="caja" type='checkbox' name='casilla' required="obligatorio")
-                                |Me comprometo a no enviar contenido inapropiado.
+                .intro-text.left-0.text-center.bg-faded.p-5.rounded(id="seccion")
+                    h2.section-heading.mb-4
+                        span.section-heading-upper 
+                            p.mb-3 Nuestra tarea es la de liberarnos... mediante la extensión de nuestro círculo de compasión hasta que contenga a todas las criaturas vivientes, la naturaleza entera y su belleza.
+                        span.section-heading-lower -Albert Einstein             
+        section(style="background-image: url(../images/camino.jpg)",id="contacto")
+            .container
+                .intro-text.left-0.text-center.bg-faded.p-5.rounded
+                    form(method="post", action="index/send",id="contactForm") 
+                        h4   
+                            img(id="lapiz" src="images/mensaje.png")
+                            |   Envíanos un mensaje! 
+                        .form-group
+                            label(for='inputName') Nombre 
+                                span.obligatorio *
+                            input.form-control(type="text",name="name", placeholder="ingresa tu nombre...",required="obligatorio")
+                        .form-group
+                            label(for='inputEmail4') Email 
+                                span.obligatorio *
+                            input#inputEmail4.form-control(type='email' name="email" placeholder='escribe tu email...' required="obligatorio")
+                        .form-group
+                            select#inputState.form-control
+                                option(selected='') elije...
+                                option Ninguna
+                                option Soy vegetariano/a o vegano/a
+                                option Me encuentro en transición al veganismo o vegetarianismo
+                        -form-group
+                            label(for="inputMessage") Mensaje
                                 span.obligatorio  *
-                                p.aviso
-                                    span.obligatorio  * 
-                                        | los campos son obligatorios.
-                                input.btn.btn-warning(type="submit",name="enviar", value="Enviar")
-                    .col-lg-6.order-lg-1
-                        .p-5
-                        img.img-fluid.rounded-circle(src='images/zorros.jpg' alt='')
-                        .p-5
-
-        
+                            textarea.form-control(name="message", placeholder="describe tu mensaje...",maxlength="600",required="obligatorio")
+                            pre
+                            input(id="caja" type='checkbox' name='casilla' required="obligatorio")
+                            |Me comprometo a no enviar contenido inapropiado.
+                            span.obligatorio  *
+                        input.btn.btn-warning(type="submit",name="enviar", value="Enviar")
+                            
+    // Footer
+    footer.py-5.bg-dark
+        .container
+            p.m-0.text-center.text-muted.small.mb-0 Copyright © Veganos y Sanos 2021
+    
     // WhatsApp div
     #WAButton
     script(type='text/javascript').
@@ -128,8 +135,4 @@ block content
                 position: "right" 
             });
         });
-    // Footer
-    footer.py-5.bg-dark
-        .container
-            p.m-0.text-center.text-muted.small.mb-0 Copyright © Veganos y Sanos 2021
     

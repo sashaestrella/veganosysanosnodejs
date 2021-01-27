@@ -7,21 +7,24 @@ block content
                 img.d-inline-block.align-top(src='images/veganosYsanos.jpeg' width='30' height='30' alt='')
             |   Veganos y Sanos
     br       
-    ul.nav.nav-pills(style="background: linear-gradient(#9796f0, #fbc7d4)")
-        li.nav-item
-            a.nav-link(href='/veganismo') Sobre el veganismo
-        li.nav-item
-            a.nav-link(href='/comoComenzar') Como comenzar
+    ul.nav.nav-pills(style="background: linear-gradient(#5433ff, #20bdff, #a5fecb)")
+            li.nav-item
+                a.nav-link(href='/veganismo') Sobre el veganismo
+            li.nav-item
+                a.nav-link.dropdown-toggle(data-toggle='dropdown' href='/comoComenzar' role='button' aria-haspopup='true' aria-expanded='false') Como comenzar
+                .dropdown-menu
+                    a.dropdown-item(href='#tipos') Tipos de vegetarianismo - Decide el tuyo
+                    a.dropdown-item(href='#pocoapoco') Hacerme vegetariano poco a poco
         
-        section.page-section.clearfix
-            .container
-                .intro
-                    img.intro-img.img-fluid.mb-3.mb-lg-0.rounded(src='images/vaquita.jpg' alt='')
-                    .intro-text.left-0.text-center.bg-faded.p-5.rounded
-                        h2.section-heading.mb-4
-                            span.section-heading-upper 
-                                p.mb-3 Las mentes más profundas de todos los tiempos han sentido compasión por los animales.
-                            span.section-heading-lower -Friedrich Nietszche
+            section.page-section.clearfix
+                .container
+                    .intro
+                        img.intro-img.img-fluid.mb-3.mb-lg-0.rounded(src='images/vaquita.jpg' alt='')
+                        .intro-text.left-0.text-center.bg-faded.p-5.rounded
+                            h2.section-heading.mb-4
+                                span.section-heading-upper 
+                                    p.mb-3 Las mentes más profundas de todos los tiempos han sentido compasión por los animales.
+                                span.section-heading-lower -Friedrich Nietszche
 
     section(id="tipos")
         .container
@@ -43,14 +46,14 @@ block content
                         li <b>Frugivorismo</b>: solo se consumen frutas en todas sus variedades, sobre todo de temporada.
                         li <b>Flexitarianismo o flexivegetarianismo</b>: hace referencia a una reciente tendencia surgida hace algunos años basada en una dieta vegetariana combinada de manera ocasional y/o oportunista con la ingesta de algún producto animal, pero siempre manteniendo un porcentaje mucho mayor de alimentos vegetarianos.
     
-    section(id="pocoapoco",style="background: linear-gradient(#c6ffdd, #fbd786, #f7797d)")
+    section(id="pocoapoco" style="background: linear-gradient(#c6ffdd, #fbd786, #f7797d)")
         .container
             .row.align-items-center
                 .p-5
                     h2.section-heading.mb-4
-                        span.section-heading-upper Hacerme vegetariano
+                        span.section-heading-upper <mark>Hacerme vegetariano</mark>
                         pre
-                        span.section-heading-lower poco a poco
+                        span.section-heading-lower <mark>poco a poco</mark>
                     ol
                         li(value="1") Empieza por sustituir las carnes animales de los platos que cocinas normalmente por proteína vegetal. La legumbres, los cereales, los frutos secos, las semillas, los derivados de la soja como el tofu o el tempéh, o el seitán (derivado del trigo) entre otros alimentos, son muy ricos en proteínas y se pueden encontrar fácilmente en cualquier sitio. Normalmente, primero es más fácil dejar las carnes rojas (cerdo, ternera, vaca, buey...), luego las blancas (pollo, conejo y otra aves) y por último el pescado y el marisco. Esta transición puede ser gradual y no hay ninguna duración predeterminada. Nuestra recomendación es que cada semana dejes un tipo de carne y la sustituyas por una buena ración de proteína vegetal. 
                         li(value="2") A medida que vayas sustituyendo las carnes de tus platos más cotidianos busca nuevos ingredientes que normalmente no comes y anímate a preparar recetas diferentes. 
