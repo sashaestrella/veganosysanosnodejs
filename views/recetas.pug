@@ -1,11 +1,12 @@
 extends layout
 
 block content
-    nav.navbar.navbar-expand-lg.fixed-top.py-3
-        .container
-            a.navbar-brand.text-uppercase.font-weight-bold(href='/') Veganos y Sanos
-
-    pre
+    nav.navbar.navbar-expand-lg.fixed-top.py-3.bg-light
+        a.navbar-brand(href='/')
+            span.border.border-success
+                img.d-inline-block.align-top(src='images/veganosYsanos.jpeg' width='30' height='30' alt='')
+            |   Veganos y Sanos
+    br
     .container      
         .row
             .col-lg-4.col-sm-6.portfolio-item

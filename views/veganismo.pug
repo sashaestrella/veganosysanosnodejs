@@ -1,10 +1,12 @@
 extends layout
 
 block content
-    nav.navbar.navbar-expand-lg.fixed-top.py-3
-        .container
-            a.navbar-brand.text-uppercase.font-weight-bold(href='/') Veganos y Sanos
-
+    nav.navbar.navbar-expand-lg.fixed-top.py-3.bg-light
+        a.navbar-brand(href='/')
+            span.border.border-success  
+                img.d-inline-block.align-top(src='images/veganosYsanos.jpeg' width='30' height='30' alt='')
+            |   Veganos y Sanos
+    br       
     ul.nav.nav-pills(style="background: linear-gradient(#9796f0, #fbc7d4)")
         li.nav-item
             a.nav-link(href='/veganismo') Sobre el veganismo

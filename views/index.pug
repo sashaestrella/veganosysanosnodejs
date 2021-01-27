@@ -1,9 +1,12 @@
 extends layout
 
 block content
-    nav.navbar.navbar-expand-lg.fixed-top.py-3
-        .container
-            a.navbar-brand.text-uppercase.font-weight-bold(href='/') Veganos y Sanos
+    // Image and text
+    nav.navbar.navbar-expand-lg.fixed-top.py-3.bg-light
+        a.navbar-brand(href='/')
+            span.border.border-success
+                img.d-inline-block.align-top(src='images/veganosYsanos.jpeg' width='30' height='30' alt='')
+            |   Veganos y Sanos
 
     header
         #carouselExampleIndicators.carousel.slide(data-ride='carousel')
@@ -73,20 +76,22 @@ block content
                     video(width="700",height="440",controls="controls",autoplay poster="images/muybueno.jpg")
                         source(src='video/videoAnimales.mp4',type='video/mp4')
                 
-        section(style="background: linear-gradient(#ffe259, #ffa751)")
+        section
             .container
                 .row.align-items-center
                     .col-lg-6.order-lg-2
                         form(method="post", action="index/send",id="contactForm") 
-                            h3
-                                p Contacto 
-                                    img(id="lapiz" src="images/lapiz.png")
+                            h4   
+                                img(id="lapiz" src="images/mensaje.png")
+                                |   Envíanos un mensaje! 
                             .form-group
-                                label(for='inputName') <mark>Nombre</mark>
-                                input.form-control(type="text",name="name", placeholder="ingresa tu nombre...",required)
+                                label(for='inputName') Nombre 
+                                    span.obligatorio *
+                                input.form-control(type="text",name="name", placeholder="ingresa tu nombre...",required="obligatorio")
                             .form-group
-                                label(for='inputEmail4') <mark>Email</mark>
-                                input#inputEmail4.form-control(type='email' name="email" placeholder='escribe tu email...' required)
+                                label(for='inputEmail4') Email 
+                                    span.obligatorio *
+                                input#inputEmail4.form-control(type='email' name="email" placeholder='escribe tu email...' required="obligatorio")
                             .form-group
                                 select#inputState.form-control
                                     option(selected='') elije...
@@ -94,11 +99,17 @@ block content
                                     option Soy vegetariano/a o vegano/a
                                     option Me encuentro en transición al veganismo o vegetarianismo
                             -form-group
-                                label(for="inputMessage") <mark>Mensaje</mark>
-                                textarea.form-control(name="message", placeholder="describe tu mensaje...",maxlength="600",required)
+                                label(for="inputMessage") Mensaje
+                                    span.obligatorio  *
+                                textarea.form-control(name="message", placeholder="describe tu mensaje...",maxlength="600",required="obligatorio")
                                 pre
+                                input(id="caja" type='checkbox' name='casilla' required="obligatorio")
+                                |Me comprometo a no enviar contenido inapropiado.
+                                span.obligatorio  *
+                                p.aviso
+                                    span.obligatorio  * 
+                                        | los campos son obligatorios.
                                 input.btn.btn-warning(type="submit",name="enviar", value="Enviar")
-                            
                     .col-lg-6.order-lg-1
                         .p-5
                         img.img-fluid.rounded-circle(src='images/zorros.jpg' alt='')
@@ -117,4 +128,8 @@ block content
                 position: "right" 
             });
         });
+    // Footer
+    footer.py-5.bg-dark
+        .container
+            p.m-0.text-center.text-muted.small.mb-0 Copyright © Veganos y Sanos 2021
     
