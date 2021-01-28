@@ -26,7 +26,7 @@ server.on('listening', onListening);
 
 var io = socketIo(server);
 let clients = 0;
-io.sockets.on('connection', (socket) => {
+io.on('connection', (socket) => {
   //console.log("nueva conexion");
   socket.on("chat",function(data){
     io.sockets.emit("chat",data)
