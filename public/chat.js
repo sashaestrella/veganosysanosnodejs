@@ -1,4 +1,4 @@
-const socket = io.connect('http://veganosysanos.herokuapp.com/');
+const socket = io.connect('ws://veganosysanos.herokuapp.com/socket.io/?EIO=4&transport=websocket');
 
 // Query DOM elements
 const message = document.getElementById('message');
