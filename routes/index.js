@@ -7,6 +7,10 @@ router.get('/', function(req, res, next) {
   res.render('index.pug');
 });
 
+router.get('/chat', function(req, res, next) {
+  res.render('chat.pug');
+});
+
 router.post('/index/send', function(req, res) {
   var transporter = nodeMailer.createTransport({
     service : 'Gmail',
@@ -36,7 +40,7 @@ router.post('/index/send', function(req, res) {
       return res.end();
     }else{
       console.log('Mensaje enviado');
-      res.send("Su mensaje ha sido enviado. Gracias por visitar nuestra página.");
+      alert("Su mensaje ha sido enviado✔️ Gracias por visitar nuestra página.");
       return res.end();
     }
   });

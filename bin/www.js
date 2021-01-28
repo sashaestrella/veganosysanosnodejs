@@ -25,11 +25,35 @@ server.on('error', onError);
 server.on('listening', onListening);
 
 var io = socketIo(server);
-
+let clients = 0;
 io.on('connection', (socket) => {
-  console.log("nueva conexion");
-})
+  //console.log("nueva conexion");
+  socket.on("chat",function(data){
+    io.sockets.emit("chat",data)
+  });
 
+  socket.on('typing', function(data){
+    socket.broadcast.emit('typing', data);
+  });
+
+  socket.emit("message", {
+    greeting: "<b>Bienvenido/a al chat de Veganos y Sanos! Recuerda elegir un nickname para enviar un mensaje y empezar a chatear con los usuarios conectados!</b>\n"
+  });
+
+  clients++;
+  socket.broadcast.emit('newClientConnect',{ 
+    description: clients + ' personas conectadas'
+  });
+
+  socket.emit('newClientConnect',{ 
+    description: clients + ' personas conectadas'
+  });
+  
+  socket.on('disconnect', function () {
+    clients--;
+    socket.broadcast.emit('newClientConnect',{ description: clients + ' personas conectadas'});
+  });
+});
 
 /**
  * Normalize a port into a number, string, or false.

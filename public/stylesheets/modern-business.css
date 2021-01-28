@@ -267,10 +267,81 @@ ol li:hover {
 	transform: scale(1.1);
 }
 
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,400i,700");
+* {
+  box-sizing: border-box;
+}
+/*seccion nickname*/
+#main-output{
+  background-color: #2C2F33;
+  border-radius: 10px;
+  border-color: blue;
+}
+
+/*seccion donde van los mensajes enviados*/
+#output{
+  border-radius: 10px;
+  padding: 15px 15px 15px;
+  height: 350px;
+  overflow-y: scroll;
+  background-color: #2C2F33;
+  color:blanchedalmond;
+  border-bottom: 1px solid #23272A;
+  border-color: rgb(223, 220, 72);
+}
+
+/*seccion donde se escribe el mensaje*/
+#message {
+  width: 150%;
+  height: 50px;
+  background-color:#2C2F33;
+  color: #FFFFFF;
+  border: 3px solid #2C2F33;
+  overflow:auto;
+}
+
+/*boton enviar*/
+#send{
+  width: 50%; 
+}
+
+/*campo para escribir el nickname*/
+#handle{
+  width: 100%;
+  background-color:#2C2F33;
+  opacity: 0.7;
+  border: none;
+  height: 30%;
+  color:#FFFFFF;
+}
+
+/*fecha de cada mensaje*/
+#date, #time{
+  font-style: oblique;
+  color:#99AAB5;
+  font-size: 14px;
+}
+
+/*color nickname*/
+#style-handle{
+  color: #7eda72;
+}
+
+/*mensaje de: bienvenidos*/
+.announcements{
+  color: #dad072;
+  text-transform: full-width;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+/*mensaje de clientes conectados*/
+#right-panel{
+  padding-top: 3px;
+  text-align:center;
+  color: #30c548;
+  border: 2px solid #30c548;
+  border-radius: 10px;
+  height: 50%;
+}
 
 
-
-
-
-
-  
