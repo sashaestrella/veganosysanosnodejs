@@ -40,7 +40,7 @@ router.post('/index/send', function(req, res) {
       return res.end();
     }else{
       console.log('Mensaje enviado');
-      alert("Su mensaje ha sido enviado✔️ Gracias por visitar nuestra página.");
+      res.alert("Su mensaje ha sido enviado✔️ Gracias por visitar nuestra página.");
       return res.end();
     }
   });
