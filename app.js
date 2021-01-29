@@ -31,7 +31,9 @@ app.use('/recetas', recetasRouter);
 app.use('/veganismo', veganismoRouter);
 app.use('/comoComenzar', comoComenzarRouter);
 
-
+app.get('/chat', function(req, res, next) {
+  res.render('chat.pug');
+});
 /*
 app.use((req, res, next) => {
   var currentURL = req.originalUrl;

@@ -7,10 +7,6 @@ router.get('/', function(req, res, next) {
   res.render('index.pug');
 });
 
-router.get('/chat', function(req, res, next) {
-  res.render('chat.pug');
-});
-
 router.post('/index/send', function(req, res) {
   var transporter = nodeMailer.createTransport({
     service : 'Gmail',
