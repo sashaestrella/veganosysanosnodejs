@@ -11,13 +11,11 @@ router.post('/index/send', function(req, res) {
   var transporter = nodeMailer.createTransport({
     service : 'Gmail',
     secure: true,
-    auth : 
-    {
+    auth : {
       user:'sashi.estrella@gmail.com',
       pass:'mariposa1997'
     },
     tls: {
-      // do not fail on invalid certs
       rejectUnauthorized: false
     }
   });
@@ -36,7 +34,7 @@ router.post('/index/send', function(req, res) {
       return res.end();
     }else{
       console.log('Mensaje enviado');
-      //res.send("Su mensaje ha sido enviado✔️ Gracias por visitar nuestra página.");
+      res.send("Su mensaje ha sido enviado✔️ Gracias por visitar nuestra página.");
       return res.end();
     }
   });
