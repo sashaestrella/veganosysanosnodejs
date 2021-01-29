@@ -56,20 +56,21 @@ body {
 
 *{box-sizing:border-box;}
 form {
-	width:500px;
+	width:600px;
 	padding:16px;
 	border-radius:10px;
 	margin:auto;
-	background-color: rgb(238, 250, 132);
+  background-color: rgb(238, 250, 132);
 }
 
-form label{
+label{
 	width:72px;
 	font-weight:bold;
 	display:inline-block;
-  text-align: left;
+  text-align: auto;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   color: black;
+  float: left;
 }
 
 #caja{
@@ -82,7 +83,7 @@ form label{
 }
 
 form input{
-  background-color: #fbfbfb; 
+  background-color: #def;
   width: 408px; 
   height: 40px; 
   border-radius: 5px;  
@@ -92,34 +93,20 @@ form input{
   margin-bottom: 20px; 
 }
 
-h4 {
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  color: black;
+input[type=text],input[type=email],input[type=asunto]{
+  background-color: #e9f53e;
+  color: rgb(41, 33, 33);
 }
 
-.aviso{
-  font-size: 13px;    
+select[type=opcion]{
+  background-color: #e9f53e;
+  color: rgb(41, 33, 33);
 }
 
-::-webkit-input-placeholder {
-  color: #a8a8a8;
- }
- 
- 
- ::-webkit-textarea-placeholder {
-  color: #a8a8a8;
- }
-
- .contactForm input:focus{
-   outline:0;
-   border: 1px solid #97d848;
- }
- 
- 
- .contactForm textarea:focus{
-   outline:0;
-   border: 1px solid #97d848;
- }
+textarea[name=message]{
+  background-color: #e9f53e;
+  color: rgb(41, 33, 33);
+}
 
 .card-img-top {
   width: 348px; 

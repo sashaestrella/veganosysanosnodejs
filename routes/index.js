@@ -21,10 +21,10 @@ router.post('/index/send', function(req, res) {
   });
 
   var mail ={ 
-    from:req.body.email,  //remitente
+    from: req.body.email,  //remitente
     to:"sashi.estrella@gmail.com",  //destinatario
-    subject:"Nuevo mensaje de Veganos y Sanos",  //asunto del correo
-    html: '<p><ul><li>Nombre: '+ req.body.name+'</li><li> Email: '+req.body.email+'</li><li>Mensaje: '+req.body.message+'</li></ul>',
+    subject:req.body.asunto,  //asunto del correo
+    html: '<p><li><u>Nombre</u>: '+ req.body.name+'</li><li><u>Email</u>: '+req.body.email+ '</li><li><u>Opción elegida</u>: '+req.body.opcion+ '</li><li><u>Mensaje</u>: '+req.body.message+'</li></ul>',
   };
   
   transporter.sendMail(mail, function (err, info){

@@ -3,7 +3,11 @@
   "version": "1.0.0",
   "private": true,
   "description": "",
-  "keywords": ["node", "websocket", "socket.io"],
+  "keywords": [
+    "node",
+    "websocket",
+    "socket.io"
+  ],
   "scripts": {
     "start": "node ./bin/www",
     "test": "echo \"Error: no test specified\" && exit 1"
