@@ -1,4 +1,4 @@
-const socket = io.connect('http://veganosysanos.herokuapp.com/');
+const socket = io.connect('http://localhost:3001');
 
 // Query DOM elements
 const message = document.getElementById('message');
