@@ -135,8 +135,59 @@ app.get("/descarga/:nombre_receta", (req, res) => {
             console.log("Descarga OK");
           }
         });
-      }
-    )
+      })
+  }else if(req.params.nombre_receta == "Bizcochuelo marmolado"){
+    const streamEscritura = fs.createWriteStream(`${__dirname}/files/bizcochueloMarmoladoVegano.txt`);
+    const contenido = "Ingredientes🌱 \n2 tazas de premezcla\n1 taza de azúcar\n1 taza de agua\n1/4 taza de aceite de girasol\nJugo de un limón\nEsencia de vainilla\n2 cucharaditas de polvo para hornear\n1 cucharadita de bicarbonato de sodio\n\nProcedimiento 🌱\nMezclar todos los líquidos e incorporarle de a poco los secos. Dividir en dos partes la mezcla. A una de ellas le agregamos 3/4 taza de Chocolino, y mezclamos bien. Volcar ambas mezclas en un molde de torta previamente rociado con spray vegetal y enharinado. A horno bajo por aprox 45 minutos a una hora😍😍❤"
+    streamEscritura.write(`${req.params.nombre_receta} - receta por: @Veganos y Sanos\n\n${contenido}`,() => {
+        res.download(`${__dirname}/files/bizcochueloMarmoladoVegano.txt`, error => {
+          if(error){
+            console.log("ERROR");
+            res.status(404).render("error");
+          }else{
+            console.log("Descarga OK");
+          }
+        });
+    })
+  }else if(req.params.nombre_receta == "Dulce de leche de almendras"){
+    const streamEscritura = fs.createWriteStream(`${__dirname}/files/dulceDeLecheDeAlmendras.txt`);
+    const contenido = "Ingredientes🌱 \n60ml de agua\n150gr de azucar\n160ml de leche de almendras o de coco\n3 cucharadas de almidon de maiz\n1 cda esencia de vainilla\n1 cdita aceite de coco\nPizca de sal\n\nProcedimiento🤩\nMezclar en un jarrito de leche o recipiente (que se pueda llevar al fuego) el azúcar junto con el agua. Ir revolviendo de a ratitos hasta que esté hecho el caramelo. Una vez hecho esto retirar del fuego y agregarle con MUCHO CUIDADO una parte de la leche(porque empieza como a saltar por las distintas temperaturas). A la otra parte de la leche mezclarla bien con el almidón de maíz, para luego agregarla también a la mezcla anterior y llevar al fuego nuevamente. No dejar de revolver hasta que quede como una textura de 'crema pastelera' o como una crema básicamente.\nEn caliente agregarle la esencia de vainilla, el aceite de coco y la pizca de sal. Mezclar bien y colocar en un frasco (hermético si es posible). Llevar a la heladera hasta enfriar.\nY a disfrutar!!!😁😁😁"
+    streamEscritura.write(`${req.params.nombre_receta} - receta por: @Veganos y Sanos\n\n${contenido}`,() => {
+        res.download(`${__dirname}/files/dulceDeLecheDeAlmendras.txt`, error => {
+          if(error){
+            console.log("ERROR");
+            res.status(404).render("error");
+          }else{
+            console.log("Descarga OK");
+          }
+        });
+    })
+  }else if(req.params.nombre_receta == "Ñoquis de papa y zapallo"){
+    const streamEscritura = fs.createWriteStream(`${__dirname}/files/ñoquisVeganos.txt`);
+    const contenido = "Ingredientes🌱 \n1kg papas\n400gr zapallo \n400gr premezcla (aprox)\nSal, pimienta, nuez moscada a gusto\n\nProcedimiento:\nCocinar las papas y el zapallo hasta un poquito antes de llegar a punto como para hacer un puré.  Armar el puré e integrarle la harina. Armar la masa, espolvorear harina en la mesa, hacer los rollitos y cortarlos de igual tamaño.\nPoner a hervir el agua, y en cuanto empiezan a subir es porque ya están.\nPodes acompañarlo con salsa de espinacas, pesto, tuco(salsa de tomate), salsa blanca vegana, etc--- y por supuesto el queso Rawmesan que le da un toque riquisimo y muy particular!."
+    streamEscritura.write(`${req.params.nombre_receta} - receta por: @Veganos y Sanos\n\n${contenido}`,() => {
+        res.download(`${__dirname}/files/ñoquisVeganos.txt`, error => {
+          if(error){
+            console.log("ERROR");
+            res.status(404).render("error");
+          }else{
+            console.log("Descarga OK");
+          }
+        });
+    })
+  }else if(req.params.nombre_receta == "Fideos con salsa de espinaca"){
+    const streamEscritura = fs.createWriteStream(`${__dirname}/files/fideosConSalsaDeEspinacaVeganos.txt`);
+    const contenido = "Ingredientes🌱 \nUna planta de espinaca (lavar bien las hojas)\nSal, pimienta y nuez moscada a gusto\n150ml aceite de girasol\n1 cucharada de levadura nutricional sabor queso\n1 cebolla (previamente picada y cocida)\n1 diente de ajo\n\nProcesar todo y listo!! Es riquísimo!!! "
+    streamEscritura.write(`${req.params.nombre_receta} - receta por: @Veganos y Sanos\n\n${contenido}`,() => {
+        res.download(`${__dirname}/files/fideosConSalsaDeEspinacaVeganos.txt`, error => {
+          if(error){
+            console.log("ERROR");
+            res.status(404).render("error");
+          }else{
+            console.log("Descarga OK");
+          }
+        });
+    })
   }
 });
 

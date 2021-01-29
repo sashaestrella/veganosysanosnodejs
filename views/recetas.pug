@@ -6,7 +6,10 @@ block content
             span.border.border-success
                 img.d-inline-block.align-top(src='images/veganosYsanos.jpeg' width='30' height='30' alt='')
             |   Veganos y Sanos
+            center
+                h4 <u>Nuestras recetas son</u>: Veganas y Sin Tacc
     br
+    pre
     .container      
         .row
             .col-lg-4.col-sm-6.portfolio-item
@@ -16,6 +19,8 @@ block content
                     .card-body
                         h4.card-title 
                             |Torta de Naranja
+                            img(id="vegan" src="images/vegan.png")
+                            img(id="vegan" src="images/sintacc.png")
                             //a(href='/recetas/verReceta/' + recetas[0].titulo) <b>Torta de naranja</b>
                         a.btn.btn-success(href="/descarga/Torta de naranja") Descargar receta
             .col-lg-4.col-sm-6.portfolio-item
@@ -25,6 +30,8 @@ block content
                     .card-body
                         h4.card-title
                             |Brownies de Chocolino
+                            img(id="vegan" src="images/vegan.png")
+                            img(id="vegan" src="images/sintacc.png")
                             //a(href='/recetas/verReceta/' + recetas[1].titulo) <b>Brownies de Chocolino</b>   
                         a.btn.btn-success(href="/descarga/Brownies") Descargar receta
             .col-lg-4.col-sm-6.portfolio-item
@@ -34,6 +41,8 @@ block content
                     .card-body
                         h4.card-title
                             |Queso de Garbanzos
+                            img(id="vegan" src="images/vegan.png")
+                            img(id="vegan" src="images/sintacc.png")
                             //a(href='/recetas/verReceta/' + recetas[2].titulo) <b>Queso de garbanzos</b> 
                         a.btn.btn-success(href="/descarga/Queso de garbanzos") Descargar receta
             .col-lg-4.col-sm-6.portfolio-item
@@ -43,6 +52,8 @@ block content
                     .card-body
                         h4.card-title
                             |Torta de Manzana
+                            img(id="vegan" src="images/vegan.png")
+                            img(id="vegan" src="images/sintacc.png")
                             //a(href='/recetas/verReceta/' + recetas[3].titulo) <b>Torta de manzana</b>
                         a.btn.btn-success(href="/descarga/Torta de manzana") Descargar receta
             .col-lg-4.col-sm-6.portfolio-item
@@ -52,6 +63,8 @@ block content
                     .card-body
                         h4.card-title
                             |Pizza
+                            img(id="vegan" src="images/vegan.png")
+                            img(id="vegan" src="images/sintacc.png")
                             //a(href='/recetas/verReceta/' + recetas[4].titulo) <b>Pizza</b>
                         a.btn.btn-success(href="/descarga/Pizza") Descargar receta
             .col-lg-4.col-sm-6.portfolio-item
@@ -61,10 +74,65 @@ block content
                     .card-body
                         h4.card-title
                             |Bombas de Papa
+                            img(id="vegan" src="images/vegan.png")
+                            img(id="vegan" src="images/sintacc.png")
                             //a(href='/recetas/verReceta/' + recetas[5].titulo) <b>Bombas de papa</b>
                         a.btn.btn-success(href="/descarga/Bombas de papa") Descargar receta
+            .col-lg-4.col-sm-6.portfolio-item
+                .card.h-100
+                    a(href='https://www.instagram.com/p/CKcgpjMHSaS/')
+                        img.card-img-top(src='images/bizcoMarmolado.jpg' class="w3-border w3-padding" alt='')
+                    .card-body
+                        .d-flex
+                            a.btn.btn-danger.ml-auto(href="#") <b>NUEVA</b>
+                        h4.card-title
+                            |Bizcochuelo Marmolado
+                            img(id="vegan" src="images/vegan.png")
+                            img(id="vegan" src="images/sintacc.png")
+                            //a(href='/recetas/verReceta/' + recetas[5].titulo) <b>Bombas de papa</b>
+                        a.btn.btn-success(href="/descarga/Bizcochuelo marmolado") Descargar receta
+            .col-lg-4.col-sm-6.portfolio-item
+                .card.h-100
+                    a(href='https://www.instagram.com/p/CFGhR6NgNwF/')
+                        img.card-img-top(src='images/dulce de almendras.jpg' class="w3-border w3-padding" alt='')
+                    .card-body
+                        .d-flex
+                            a.btn.btn-danger.ml-auto(href="#") <b>NUEVA</b>
+                        h4.card-title
+                            |Dulce de Leche de Almendras
+                            img(id="vegan" src="images/vegan.png")
+                            img(id="vegan" src="images/sintacc.png")
+                            //a(href='/recetas/verReceta/' + recetas[5].titulo) <b>Bombas de papa</b>
+                        a.btn.btn-success(href="/descarga/Dulce de leche de almendras") Descargar receta
+            .col-lg-4.col-sm-6.portfolio-item
+                .card.h-100
+                    a(href='https://www.instagram.com/p/CI0u9bPHVn2/')
+                        img.card-img-top(src='images/ñoquis.jpg' class="w3-border w3-padding" alt='')
+                    .card-body
+                        .d-flex
+                            a.btn.btn-danger.ml-auto(href="#") <b>NUEVA</b>
+                        h4.card-title
+                            |Ñoquis de Papa y Zapallo
+                            img(id="vegan" src="images/vegan.png")
+                            img(id="vegan" src="images/sintacc.png")
+                            //a(href='/recetas/verReceta/' + recetas[5].titulo) <b>Bombas de papa</b>
+                        a.btn.btn-success(href="/descarga/Ñoquis de papa y zapallo") Descargar receta
+            .col-lg-4.col-sm-6.portfolio-item
+                .card.h-100
+                    a(href='https://www.instagram.com/p/CKcVPkOnozQ/')
+                        img.card-img-top(src='images/fideosConEspinaca.jpg' class="w3-border w3-padding" alt='')
+                    .card-body
+                        .d-flex
+                            a.btn.btn-danger.ml-auto(href="#") <b>NUEVA</b>
+                        h4.card-title
+                            |Fideos con Salsa de Espinaca
+                            img(id="vegan" src="images/vegan.png")
+                            img(id="vegan" src="images/sintacc.png")
+                            //a(href='/recetas/verReceta/' + recetas[5].titulo) <b>Bombas de papa</b>
+                        a.btn.btn-success(href="/descarga/Fideos con salsa de espinaca") Descargar receta
 
         a.btn.btn-primary(href="/") »Volver
+        p.m-0.text-center.text-muted.small.mb-0 Contenido actualizado el 29/01/2021
     pre                      
     // Footer
     footer.py-5.bg-dark
