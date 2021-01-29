@@ -36,7 +36,7 @@ router.post('/index/send', function(req, res) {
       return res.end();
     }else{
       console.log('Mensaje enviado');
-      res.send("Su mensaje ha sido enviado✔️ Gracias por visitar nuestra página.");
+      //res.send("Su mensaje ha sido enviado✔️ Gracias por visitar nuestra página.");
       return res.end();
     }
   });

@@ -34,15 +34,8 @@ app.use('/comoComenzar', comoComenzarRouter);
 app.get('/chat', function(req, res, next) {
   res.render('chat.pug');
 });
-/*
-app.use((req, res, next) => {
-  var currentURL = req.originalUrl;
-  if (currentURL === "/antiguo-documento") {
-    return res.redirect(301, "https://google.com"); 
-  }
-  return next();
-});
 
+/*
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
